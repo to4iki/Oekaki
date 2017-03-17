@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E64E1B81E7BF72C002BB97A /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */; };
+		1E7688C11E7BF14900CDE8AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */; };
+		1E7688C31E7BF14900CDE8AC /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */; };
+		1E7688C61E7BF14900CDE8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C41E7BF14900CDE8AC /* Main.storyboard */; };
+		1E7688C81E7BF14900CDE8AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C71E7BF14900CDE8AC /* Assets.xcassets */; };
+		1E7688CB1E7BF14900CDE8AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C91E7BF14900CDE8AC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		1E7688BD1E7BF14900CDE8AC /* Oekaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oekaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		1E7688C51E7BF14900CDE8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E7688C71E7BF14900CDE8AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E7688CA1E7BF14900CDE8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E7688CC1E7BF14900CDE8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E7688BA1E7BF14900CDE8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E7688B41E7BF14900CDE8AC = {
+			isa = PBXGroup;
+			children = (
+				1E7688BF1E7BF14900CDE8AC /* Oekaki */,
+				1E7688BE1E7BF14900CDE8AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E7688BE1E7BF14900CDE8AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E7688BD1E7BF14900CDE8AC /* Oekaki.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E7688BF1E7BF14900CDE8AC /* Oekaki */ = {
+			isa = PBXGroup;
+			children = (
+				1E7688D21E7BF2B000CDE8AC /* presentation */,
+				1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */,
+				1E7688CC1E7BF14900CDE8AC /* Info.plist */,
+			);
+			path = Oekaki;
+			sourceTree = "<group>";
+		};
+		1E7688D21E7BF2B000CDE8AC /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1E7688D31E7BF2C600CDE8AC /* view */,
+				1E7688D41E7BF2CA00CDE8AC /* viewController */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		1E7688D31E7BF2C600CDE8AC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1E7688C71E7BF14900CDE8AC /* Assets.xcassets */,
+				1E7688C91E7BF14900CDE8AC /* LaunchScreen.storyboard */,
+				1E7688C41E7BF14900CDE8AC /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1E7688D41E7BF2CA00CDE8AC /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */,
+				1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E7688BC1E7BF14900CDE8AC /* Oekaki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E7688CF1E7BF14900CDE8AC /* Build configuration list for PBXNativeTarget "Oekaki" */;
+			buildPhases = (
+				1E7688B91E7BF14900CDE8AC /* Sources */,
+				1E7688BA1E7BF14900CDE8AC /* Frameworks */,
+				1E7688BB1E7BF14900CDE8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Oekaki;
+			productName = Oekaki;
+			productReference = 1E7688BD1E7BF14900CDE8AC /* Oekaki.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E7688B51E7BF14900CDE8AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = to4iki;
+				TargetAttributes = {
+					1E7688BC1E7BF14900CDE8AC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KX9834768X;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1E7688B81E7BF14900CDE8AC /* Build configuration list for PBXProject "Oekaki" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E7688B41E7BF14900CDE8AC;
+			productRefGroup = 1E7688BE1E7BF14900CDE8AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E7688BC1E7BF14900CDE8AC /* Oekaki */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E7688BB1E7BF14900CDE8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7688CB1E7BF14900CDE8AC /* LaunchScreen.storyboard in Resources */,
+				1E7688C81E7BF14900CDE8AC /* Assets.xcassets in Resources */,
+				1E7688C61E7BF14900CDE8AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E7688B91E7BF14900CDE8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7688C31E7BF14900CDE8AC /* DrawingViewController.swift in Sources */,
+				1E7688C11E7BF14900CDE8AC /* AppDelegate.swift in Sources */,
+				1E64E1B81E7BF72C002BB97A /* TimelineViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E7688C41E7BF14900CDE8AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E7688C51E7BF14900CDE8AC /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		1E7688C91E7BF14900CDE8AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E7688CA1E7BF14900CDE8AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E7688CD1E7BF14900CDE8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E7688CE1E7BF14900CDE8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E7688D01E7BF14900CDE8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KX9834768X;
+				INFOPLIST_FILE = Oekaki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.to4iki.Oekaki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1E7688D11E7BF14900CDE8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KX9834768X;
+				INFOPLIST_FILE = Oekaki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.to4iki.Oekaki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E7688B81E7BF14900CDE8AC /* Build configuration list for PBXProject "Oekaki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E7688CD1E7BF14900CDE8AC /* Debug */,
+				1E7688CE1E7BF14900CDE8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E7688CF1E7BF14900CDE8AC /* Build configuration list for PBXNativeTarget "Oekaki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E7688D01E7BF14900CDE8AC /* Debug */,
+				1E7688D11E7BF14900CDE8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E7688B51E7BF14900CDE8AC /* Project object */;
+}
