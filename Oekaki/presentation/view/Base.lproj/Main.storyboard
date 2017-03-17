@@ -70,7 +70,16 @@
                             <constraint firstItem="g9y-jH-iTC" firstAttribute="top" secondItem="VvX-a5-BNP" secondAttribute="bottom" id="oYa-Te-Fkh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vht-6O-H89"/>
+                    <navigationItem key="navigationItem" id="vht-6O-H89">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Ouf-Ik-B06">
+                            <connections>
+                                <action selector="didTouchSaveButton:" destination="3GI-OD-1Pu" id="fAq-Kd-qnn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="canvasView" destination="g9y-jH-iTC" id="VLs-2n-0C1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXI-c7-cT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
