@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4327811E7C2D65004E2823 /* PathObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4327801E7C2D65004E2823 /* PathObserver.swift */; };
 		1E64E1B81E7BF72C002BB97A /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */; };
 		1E64E1BC1E7BF863002BB97A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */; };
 		1E64E1BD1E7BF863002BB97A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E64E1BB1E7BF863002BB97A /* RxSwift.framework */; };
+		1E64E1C01E7BF8F3002BB97A /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1BF1E7BF8F3002BB97A /* CanvasView.swift */; };
+		1E64E1C71E7BFDA9002BB97A /* HandlePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1C61E7BFDA9002BB97A /* HandlePathView.swift */; };
+		1E64E1C91E7BFDEB002BB97A /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1C81E7BFDEB002BB97A /* Path.swift */; };
+		1E64E1CC1E7BFFD7002BB97A /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1CB1E7BFFD7002BB97A /* Drawable.swift */; };
+		1E64E1CE1E7BFFE8002BB97A /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1CD1E7BFFE8002BB97A /* Movable.swift */; };
+		1E64E1D01E7C056B002BB97A /* PathGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1CF1E7C056B002BB97A /* PathGroup.swift */; };
 		1E7688C11E7BF14900CDE8AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */; };
 		1E7688C31E7BF14900CDE8AC /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */; };
 		1E7688C61E7BF14900CDE8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C41E7BF14900CDE8AC /* Main.storyboard */; };
@@ -18,9 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E4327801E7C2D65004E2823 /* PathObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathObserver.swift; sourceTree = "<group>"; };
 		1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		1E64E1BB1E7BF863002BB97A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		1E64E1BF1E7BF8F3002BB97A /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		1E64E1C61E7BFDA9002BB97A /* HandlePathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandlePathView.swift; sourceTree = "<group>"; };
+		1E64E1C81E7BFDEB002BB97A /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		1E64E1CB1E7BFFD7002BB97A /* Drawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		1E64E1CD1E7BFFE8002BB97A /* Movable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movable.swift; sourceTree = "<group>"; };
+		1E64E1CF1E7C056B002BB97A /* PathGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathGroup.swift; sourceTree = "<group>"; };
 		1E7688BD1E7BF14900CDE8AC /* Oekaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oekaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
@@ -52,12 +66,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1E64E1C51E7BFD8E002BB97A /* canvas */ = {
+			isa = PBXGroup;
+			children = (
+				1E64E1CA1E7BFFB0002BB97A /* path */,
+				1E64E1BF1E7BF8F3002BB97A /* CanvasView.swift */,
+				1E64E1CB1E7BFFD7002BB97A /* Drawable.swift */,
+				1E64E1CD1E7BFFE8002BB97A /* Movable.swift */,
+			);
+			path = canvas;
+			sourceTree = "<group>";
+		};
+		1E64E1CA1E7BFFB0002BB97A /* path */ = {
+			isa = PBXGroup;
+			children = (
+				1E64E1C61E7BFDA9002BB97A /* HandlePathView.swift */,
+				1E64E1C81E7BFDEB002BB97A /* Path.swift */,
+				1E64E1CF1E7C056B002BB97A /* PathGroup.swift */,
+				1E4327801E7C2D65004E2823 /* PathObserver.swift */,
+			);
+			path = path;
+			sourceTree = "<group>";
+		};
 		1E7688B41E7BF14900CDE8AC = {
 			isa = PBXGroup;
 			children = (
+				1E64E1B91E7BF862002BB97A /* Frameworks */,
 				1E7688BF1E7BF14900CDE8AC /* Oekaki */,
 				1E7688BE1E7BF14900CDE8AC /* Products */,
-				1E64E1B91E7BF862002BB97A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +127,7 @@
 		1E7688D31E7BF2C600CDE8AC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1E64E1C51E7BFD8E002BB97A /* canvas */,
 				1E7688C71E7BF14900CDE8AC /* Assets.xcassets */,
 				1E7688C91E7BF14900CDE8AC /* LaunchScreen.storyboard */,
 				1E7688C41E7BF14900CDE8AC /* Main.storyboard */,
@@ -202,6 +239,13 @@
 			files = (
 				1E7688C31E7BF14900CDE8AC /* DrawingViewController.swift in Sources */,
 				1E7688C11E7BF14900CDE8AC /* AppDelegate.swift in Sources */,
+				1E64E1C71E7BFDA9002BB97A /* HandlePathView.swift in Sources */,
+				1E64E1D01E7C056B002BB97A /* PathGroup.swift in Sources */,
+				1E64E1CC1E7BFFD7002BB97A /* Drawable.swift in Sources */,
+				1E64E1C01E7BF8F3002BB97A /* CanvasView.swift in Sources */,
+				1E64E1C91E7BFDEB002BB97A /* Path.swift in Sources */,
+				1E64E1CE1E7BFFE8002BB97A /* Movable.swift in Sources */,
+				1E4327811E7C2D65004E2823 /* PathObserver.swift in Sources */,
 				1E64E1B81E7BF72C002BB97A /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
