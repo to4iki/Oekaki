@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E64E1B81E7BF72C002BB97A /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */; };
+		1E64E1BC1E7BF863002BB97A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */; };
+		1E64E1BD1E7BF863002BB97A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E64E1BB1E7BF863002BB97A /* RxSwift.framework */; };
 		1E7688C11E7BF14900CDE8AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */; };
 		1E7688C31E7BF14900CDE8AC /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */; };
 		1E7688C61E7BF14900CDE8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C41E7BF14900CDE8AC /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1E64E1BB1E7BF863002BB97A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		1E7688BD1E7BF14900CDE8AC /* Oekaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oekaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7688C21E7BF14900CDE8AC /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E64E1BC1E7BF863002BB97A /* RxCocoa.framework in Frameworks */,
+				1E64E1BD1E7BF863002BB97A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E64E1B91E7BF862002BB97A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */,
+				1E64E1BB1E7BF863002BB97A /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E7688B41E7BF14900CDE8AC = {
 			isa = PBXGroup;
 			children = (
 				1E7688BF1E7BF14900CDE8AC /* Oekaki */,
 				1E7688BE1E7BF14900CDE8AC /* Products */,
+				1E64E1B91E7BF862002BB97A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +117,7 @@
 				1E7688B91E7BF14900CDE8AC /* Sources */,
 				1E7688BA1E7BF14900CDE8AC /* Frameworks */,
 				1E7688BB1E7BF14900CDE8AC /* Resources */,
+				1E64E1BE1E7BF869002BB97A /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -158,6 +175,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E64E1BE1E7BF869002BB97A /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = "Carthage Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E7688B91E7BF14900CDE8AC /* Sources */ = {
@@ -290,6 +326,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KX9834768X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Oekaki/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.to4iki.Oekaki;
@@ -303,6 +343,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KX9834768X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Oekaki/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.to4iki.Oekaki;
