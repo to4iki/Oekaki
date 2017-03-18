@@ -14,6 +14,7 @@ final class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        registerForPreviewing(with: self, sourceView: collectionView)
         illustImages = IllustRepositoryOnMemory.shared.load()
     }
 }
@@ -43,9 +44,27 @@ extension TimelineViewController: UICollectionViewDataSource {
 extension TimelineViewController: UICollectionViewDelegate {
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension TimelineViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return cellSize
+    }
+}
+
+// MARK: - UIViewControllerPreviewingDelegate
+extension TimelineViewController: UIViewControllerPreviewingDelegate {
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        print("peek")
+        guard let indexPath = collectionView.indexPathForItem(at: location) else { return nil }
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return nil }
+        previewingContext.sourceRect = cell.frame
+        let illust = illustImages[indexPath.row]
+        return IllustPreviewViewController.instantiate(image: illust)
+    }
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        print("pop")
     }
 }
