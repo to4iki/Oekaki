@@ -17,15 +17,16 @@ final class IllustCollectionViewCell: UICollectionViewCell {
         collectionView.register(IllustCollectionViewCell.Nib, forCellWithReuseIdentifier: IllustCollectionViewCell.Identifier)
     }
 
-    static func dequeue(cellOf: String, by collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
+    static func dequeue(cellOf: UIImage, by collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IllustCollectionViewCell.Identifier, for: indexPath) as! IllustCollectionViewCell
-        cell.set(cellOf)
+        cell.setImage(cellOf)
         return cell
     }
 }
 
 extension IllustCollectionViewCell {
 
-    func set(_ string: String) {
+    func setImage(_ image: UIImage) {
+        imageView.image = image
     }
 }
