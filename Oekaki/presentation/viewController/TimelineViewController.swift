@@ -14,7 +14,7 @@ final class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        registerForPreviewing(with: self, sourceView: collectionView)
+        setupPreviewing()
         illustImages = IllustRepositoryOnMemory.shared.load()
     }
 }
@@ -25,6 +25,12 @@ extension TimelineViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         IllustCollectionViewCell.register(to: collectionView)
+    }
+
+    fileprivate func setupPreviewing() {
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: collectionView)
+        }
     }
 }
 

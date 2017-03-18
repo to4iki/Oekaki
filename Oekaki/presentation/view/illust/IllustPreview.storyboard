@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,15 +23,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SkW-OV-iUU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SkW-OV-iUU" secondAttribute="height" multiplier="1:1" id="txN-Ya-EsG"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SkW-OV-iUU" secondAttribute="trailing" id="2Rw-jq-Fkb"/>
-                            <constraint firstItem="jza-RN-rYb" firstAttribute="top" secondItem="SkW-OV-iUU" secondAttribute="bottom" id="5fM-9P-eCK"/>
-                            <constraint firstItem="SkW-OV-iUU" firstAttribute="leading" secondItem="8VW-2p-ag9" secondAttribute="leading" id="QwB-un-IcB"/>
-                            <constraint firstItem="SkW-OV-iUU" firstAttribute="top" secondItem="hmZ-9c-cRr" secondAttribute="bottom" id="j8a-2p-5NC"/>
+                            <constraint firstAttribute="trailing" secondItem="SkW-OV-iUU" secondAttribute="trailing" id="D8z-7b-TB0"/>
+                            <constraint firstItem="SkW-OV-iUU" firstAttribute="leading" secondItem="8VW-2p-ag9" secondAttribute="leading" id="UaT-TZ-mRl"/>
+                            <constraint firstItem="SkW-OV-iUU" firstAttribute="centerY" secondItem="8VW-2p-ag9" secondAttribute="centerY" id="Xfy-0r-N2N"/>
+                            <constraint firstItem="SkW-OV-iUU" firstAttribute="centerX" secondItem="8VW-2p-ag9" secondAttribute="centerX" id="q3A-fP-uqD"/>
                         </constraints>
                     </view>
                     <connections>

@@ -49,9 +49,11 @@
 		1E7688CC1E7BF14900CDE8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7AE1DC1E7D76C700B97552 /* IllustRepositoryOnMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustRepositoryOnMemory.swift; sourceTree = "<group>"; };
 		1E7AE1DE1E7D814D00B97552 /* IllustPreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IllustPreview.storyboard; sourceTree = "<group>"; };
-		1E7AE1E11E7D81A000B97552 /* IllustPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllustPreviewViewController.swift; path = IllustPreviewViewController.swift; sourceTree = "<group>"; };
+		1E7AE1E11E7D81A000B97552 /* IllustPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustPreviewViewController.swift; sourceTree = "<group>"; };
 		1EBF83E81E7D189200B6EFD0 /* IllustCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EBF83E91E7D189200B6EFD0 /* IllustCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllustCollectionViewCell.xib; sourceTree = "<group>"; };
+		1ECD8FD11E7D8CE700705B2E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		1ECD8FD21E7D8CE700705B2E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 		1E64E1B91E7BF862002BB97A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1ECD8FD11E7D8CE700705B2E /* RealmSwift.framework */,
+				1ECD8FD21E7D8CE700705B2E /* Realm.framework */,
 				1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */,
 				1E64E1BB1E7BF863002BB97A /* RxSwift.framework */,
 			);
@@ -170,7 +174,6 @@
 			children = (
 				1E7AE1E11E7D81A000B97552 /* IllustPreviewViewController.swift */,
 			);
-			name = illust;
 			path = illust;
 			sourceTree = "<group>";
 		};
