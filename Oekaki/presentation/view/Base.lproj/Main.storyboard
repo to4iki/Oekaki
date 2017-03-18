@@ -9,25 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Timeline-->
-        <scene sceneID="vtq-5g-LcK">
-            <objects>
-                <viewController id="Ln3-7u-3CP" customClass="TimelineViewController" customModule="Oekaki" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g3J-wJ-qjf"/>
-                        <viewControllerLayoutGuide type="bottom" id="d55-UN-HZV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LTh-YS-GCd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Timeline" id="yel-q5-9SM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i9L-OE-Z95" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="465" y="355"/>
-        </scene>
         <!--Drawing-->
         <scene sceneID="eXB-Q8-xr3">
             <objects>
@@ -44,6 +25,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWe-z5-36I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="479" y="-349"/>
+        </scene>
+        <!--Timeline-->
+        <scene sceneID="CR5-Ho-Gah">
+            <objects>
+                <navigationController id="ab3-lh-nME" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timeline" id="GdO-QP-FM5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jox-nF-IZC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nlj-Tt-6eB" kind="relationship" relationship="rootViewController" id="M01-O3-oQA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGb-Ll-jof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="387"/>
+        </scene>
+        <!--Timeline View Controller-->
+        <scene sceneID="UjT-hK-SBk">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nlj-Tt-6eB" customClass="TimelineViewController" customModule="Oekaki" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q1I-zb-wOx"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIr-Ab-qzj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="on7-bg-xx5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-HG-GqO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="0g4-nf-2uF">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BlX-HG-GqO" secondAttribute="trailing" id="1uN-eO-zKQ"/>
+                            <constraint firstItem="BlX-HG-GqO" firstAttribute="leading" secondItem="on7-bg-xx5" secondAttribute="leading" id="67E-K5-1Dr"/>
+                            <constraint firstItem="BlX-HG-GqO" firstAttribute="top" secondItem="q1I-zb-wOx" secondAttribute="bottom" id="fyS-04-0ux"/>
+                            <constraint firstItem="fIr-Ab-qzj" firstAttribute="top" secondItem="BlX-HG-GqO" secondAttribute="bottom" id="mqQ-P2-6fV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gKo-mD-fHi"/>
+                    <connections>
+                        <outlet property="collectionView" destination="BlX-HG-GqO" id="pjB-8e-gOY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wG6-cL-dmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="386"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="Y43-hM-xhW">
@@ -97,7 +136,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Krt-1F-CHb" kind="relationship" relationship="viewControllers" id="D6O-5t-4RY"/>
-                        <segue destination="Ln3-7u-3CP" kind="relationship" relationship="viewControllers" id="yz5-HT-ltR"/>
+                        <segue destination="ab3-lh-nME" kind="relationship" relationship="viewControllers" id="gRe-LW-Hsg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvY-Cn-khS" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,6 +22,8 @@
 		1E7688C61E7BF14900CDE8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C41E7BF14900CDE8AC /* Main.storyboard */; };
 		1E7688C81E7BF14900CDE8AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C71E7BF14900CDE8AC /* Assets.xcassets */; };
 		1E7688CB1E7BF14900CDE8AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7688C91E7BF14900CDE8AC /* LaunchScreen.storyboard */; };
+		1EBF83EA1E7D189200B6EFD0 /* IllustCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF83E81E7D189200B6EFD0 /* IllustCollectionViewCell.swift */; };
+		1EBF83EB1E7D189200B6EFD0 /* IllustCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF83E91E7D189200B6EFD0 /* IllustCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		1E7688C71E7BF14900CDE8AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7688CA1E7BF14900CDE8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7688CC1E7BF14900CDE8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EBF83E81E7D189200B6EFD0 /* IllustCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllustCollectionViewCell.swift; path = IllustCollectionViewCell.swift; sourceTree = "<group>"; };
+		1EBF83E91E7D189200B6EFD0 /* IllustCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IllustCollectionViewCell.xib; path = IllustCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				1E64E1C51E7BFD8E002BB97A /* canvas */,
+				1EBF83E71E7D17ED00B6EFD0 /* illust */,
 				1E7688C71E7BF14900CDE8AC /* Assets.xcassets */,
 				1E7688C91E7BF14900CDE8AC /* LaunchScreen.storyboard */,
 				1E7688C41E7BF14900CDE8AC /* Main.storyboard */,
@@ -142,6 +147,16 @@
 				1E64E1B71E7BF72C002BB97A /* TimelineViewController.swift */,
 			);
 			path = viewController;
+			sourceTree = "<group>";
+		};
+		1EBF83E71E7D17ED00B6EFD0 /* illust */ = {
+			isa = PBXGroup;
+			children = (
+				1EBF83E81E7D189200B6EFD0 /* IllustCollectionViewCell.swift */,
+				1EBF83E91E7D189200B6EFD0 /* IllustCollectionViewCell.xib */,
+			);
+			name = illust;
+			path = illust;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7688CB1E7BF14900CDE8AC /* LaunchScreen.storyboard in Resources */,
+				1EBF83EB1E7D189200B6EFD0 /* IllustCollectionViewCell.xib in Resources */,
 				1E7688C81E7BF14900CDE8AC /* Assets.xcassets in Resources */,
 				1E7688C61E7BF14900CDE8AC /* Main.storyboard in Resources */,
 			);
@@ -245,6 +261,7 @@
 				1E64E1C01E7BF8F3002BB97A /* CanvasView.swift in Sources */,
 				1E64E1C91E7BFDEB002BB97A /* Path.swift in Sources */,
 				1E64E1CE1E7BFFE8002BB97A /* Movable.swift in Sources */,
+				1EBF83EA1E7D189200B6EFD0 /* IllustCollectionViewCell.swift in Sources */,
 				1E4327811E7C2D65004E2823 /* PathObserver.swift in Sources */,
 				1E64E1B81E7BF72C002BB97A /* TimelineViewController.swift in Sources */,
 			);
