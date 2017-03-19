@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Drawing-->
+        <!--Navigation Controller-->
         <scene sceneID="eXB-Q8-xr3">
             <objects>
                 <navigationController id="Krt-1F-CHb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drawing" id="klv-nZ-Jfn"/>
+                    <tabBarItem key="tabBarItem" title="" image="pencil" id="klv-nZ-Jfn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PEf-TW-GWl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="479" y="-349"/>
         </scene>
-        <!--Timeline-->
+        <!--Navigation Controller-->
         <scene sceneID="CR5-Ho-Gah">
             <objects>
                 <navigationController id="ab3-lh-nME" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timeline" id="GdO-QP-FM5"/>
+                    <tabBarItem key="tabBarItem" title="" image="timeline" id="GdO-QP-FM5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jox-nF-IZC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -144,4 +144,8 @@
             <point key="canvasLocation" x="-489" y="27"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil" width="30" height="30"/>
+        <image name="timeline" width="30" height="30"/>
+    </resources>
 </document>
