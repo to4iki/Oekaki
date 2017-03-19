@@ -25,6 +25,7 @@
 		1E7AE1DD1E7D76C700B97552 /* IllustRepositoryOnMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7AE1DC1E7D76C700B97552 /* IllustRepositoryOnMemory.swift */; };
 		1E7AE1DF1E7D814D00B97552 /* IllustPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7AE1DE1E7D814D00B97552 /* IllustPreview.storyboard */; };
 		1E7AE1E21E7D81A000B97552 /* IllustPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7AE1E11E7D81A000B97552 /* IllustPreviewViewController.swift */; };
+		1EA2D6281E7EB4CF006E4607 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA2D6271E7EB4CF006E4607 /* SVProgressHUD.framework */; };
 		1EBF83EA1E7D189200B6EFD0 /* IllustCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF83E81E7D189200B6EFD0 /* IllustCollectionViewCell.swift */; };
 		1EBF83EB1E7D189200B6EFD0 /* IllustCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF83E91E7D189200B6EFD0 /* IllustCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		1E7AE1DC1E7D76C700B97552 /* IllustRepositoryOnMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustRepositoryOnMemory.swift; sourceTree = "<group>"; };
 		1E7AE1DE1E7D814D00B97552 /* IllustPreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IllustPreview.storyboard; sourceTree = "<group>"; };
 		1E7AE1E11E7D81A000B97552 /* IllustPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustPreviewViewController.swift; sourceTree = "<group>"; };
+		1EA2D6271E7EB4CF006E4607 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		1EBF83E81E7D189200B6EFD0 /* IllustCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EBF83E91E7D189200B6EFD0 /* IllustCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllustCollectionViewCell.xib; sourceTree = "<group>"; };
 		1ECD8FD11E7D8CE700705B2E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA2D6281E7EB4CF006E4607 /* SVProgressHUD.framework in Frameworks */,
 				1E64E1BC1E7BF863002BB97A /* RxCocoa.framework in Frameworks */,
 				1E64E1BD1E7BF863002BB97A /* RxSwift.framework in Frameworks */,
 			);
@@ -72,6 +75,7 @@
 		1E64E1B91E7BF862002BB97A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EA2D6271E7EB4CF006E4607 /* SVProgressHUD.framework */,
 				1ECD8FD11E7D8CE700705B2E /* RealmSwift.framework */,
 				1ECD8FD21E7D8CE700705B2E /* Realm.framework */,
 				1E64E1BA1E7BF863002BB97A /* RxCocoa.framework */,
@@ -267,6 +271,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (

@@ -1,4 +1,5 @@
 import UIKit
+import SVProgressHUD
 
 final class DrawingViewController: UIViewController {
 
@@ -9,6 +10,10 @@ final class DrawingViewController: UIViewController {
     }
 
     @IBAction func didTouchSaveButton(_ sender: UIBarButtonItem) {
-        canvasView.clear()
+        SVProgressHUD.show()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            SVProgressHUD.showSuccess(withStatus: "saved :)")
+            self?.canvasView?.clear()
+        }
     }
 }
