@@ -126,6 +126,7 @@
 		1E7688BF1E7BF14900CDE8AC /* Oekaki */ = {
 			isa = PBXGroup;
 			children = (
+				1E7AE1DB1E7D6EF100B97552 /* data */,
 				1E7688D21E7BF2B000CDE8AC /* presentation */,
 				1E7688C01E7BF14900CDE8AC /* AppDelegate.swift */,
 				1E7688CC1E7BF14900CDE8AC /* Info.plist */,
@@ -136,7 +137,6 @@
 		1E7688D21E7BF2B000CDE8AC /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1E7AE1DB1E7D6EF100B97552 /* data */,
 				1E7688D31E7BF2C600CDE8AC /* view */,
 				1E7688D41E7BF2CA00CDE8AC /* viewController */,
 			);
@@ -170,6 +170,7 @@
 			children = (
 				1E7AE1DC1E7D76C700B97552 /* IllustRepositoryOnMemory.swift */,
 			);
+			name = data;
 			path = data;
 			sourceTree = "<group>";
 		};
@@ -202,6 +203,7 @@
 				1E7688BA1E7BF14900CDE8AC /* Frameworks */,
 				1E7688BB1E7BF14900CDE8AC /* Resources */,
 				1E64E1BE1E7BF869002BB97A /* Carthage Run Script */,
+				1E86EF101E7EE0ED008E5A80 /* SwiftLint Run Script */,
 			);
 			buildRules = (
 			);
@@ -279,6 +281,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		1E86EF101E7EE0ED008E5A80 /* SwiftLint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
