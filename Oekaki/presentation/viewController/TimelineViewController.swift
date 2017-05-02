@@ -63,14 +63,30 @@ extension TimelineViewController: UIViewControllerPreviewingDelegate {
 
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         print("peek")
-        guard let indexPath = collectionView.indexPathForItem(at: location) else { return nil }
-        guard let cell = collectionView.cellForItem(at: indexPath) else { return nil }
-        previewingContext.sourceRect = cell.frame
-        let illust = illustImages[indexPath.row]
-        return IllustPreviewViewController.instantiate(image: illust)
+        guard let content = fetchPreviewableContent(location: location) else { return nil }
+        return previewingViewController(content: content)
     }
 
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         print("pop")
+    }
+}
+
+// MARK: - Previewable
+extension TimelineViewController: Previewable {
+
+    func fetchPreviewableContent(location: CGPoint) -> UIImage? {
+        guard let indexPath = collectionView.indexPathForItem(at: location) else { return nil }
+        return illustImages[indexPath.row]
+    }
+
+    func fetchSourceRect(location: CGPoint) -> CGRect {
+        guard let indexPath = collectionView.indexPathForItem(at: location) else { return CGRect.zero }
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return CGRect.zero }
+        return cell.frame
+    }
+
+    func previewingViewController(content: UIImage) -> UIViewController? {
+        return IllustPreviewViewController.instantiate(image: content)
     }
 }
